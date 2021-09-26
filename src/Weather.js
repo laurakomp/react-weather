@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
+
 import "./Weather.css";
+
 import axios from "axios";
-import image from "./01d.png";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,7 +14,9 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
-      daate: "Wednesday 08:00",
+      date: new Date(response.data.dt * 1000),
+      iconUrl:
+        "https://cdn1.iconfinder.com/data/icons/weather-189/64/weather-icons-cloudy-1024.png",
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
     });
@@ -42,8 +46,9 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>Monday </li>
-          <li>07:00</li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
         </ul>
         <div className="row mt-3">
           <div className="col-4">
