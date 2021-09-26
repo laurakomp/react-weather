@@ -9,7 +9,11 @@ export default function App() {
         <Weather defaultCity="Tallinn" />
         <footer>
           This project was coded by Laura Komp and is{" "}
-          <a href="https://github.com/laurakomp/react-weather" target="_blank">
+          <a
+            href="https://github.com/laurakomp/react-weather"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced
           </a>
         </footer>
