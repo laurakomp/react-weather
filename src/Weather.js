@@ -15,8 +15,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      iconUrl:
-        "https://cdn1.iconfinder.com/data/icons/weather-189/64/weather-icons-cloudy-1024.png",
+      icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
     });
