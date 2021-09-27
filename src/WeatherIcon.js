@@ -21,5 +21,5 @@ export default function WeatherIcon({ code, alt }) {
     "50d": "/icons/fog-day.svg",
     "50n": "/icons/fog-night.svg",
   };
-  return <img src={codeMapping[code]} alt={alt} className="weatherIcon" />;
+  return <img src={codeMapping[code]} alt={alt} />;
 }

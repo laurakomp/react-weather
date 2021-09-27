@@ -26,11 +26,12 @@
   list-style: none;
 }
 
+.icon img {
+}
+
 .Weather img {
-  height: 150px;
   display: inline-block;
   position: relative;
-  bottom: 40px;
 }
 
 .Weather .temperature {
