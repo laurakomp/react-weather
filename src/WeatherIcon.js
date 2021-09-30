@@ -12,7 +12,7 @@ export default function WeatherIcon({ code, alt }) {
     "04n": "/icons/bovercast-night.svg",
     "09d": "/icons/rain.svg",
     "09n": "/icons/rain.svg",
-    "10d": "/icons/partly-cloudy-day-rain.svg",
+    "10d": "/icons/partly-cloudy-day-drizzle.svg",
     "10n": "/icons/partly-cloudy-night-rain.svg",
     "11d": "/icons/thunderstorms-day.svg",
     "11n": "/icons/thunderstorms-night.svg",
