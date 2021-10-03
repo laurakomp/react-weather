@@ -1,5 +1,7 @@
 .WeatherForecast {
   text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin: 40px 0;
 }
 
 .WeatherForecast-temperature-min {
@@ -7,5 +9,5 @@
   margin-left: 5px;
 }
 .WeatherForecast .icon {
-  padding: 20px;
+  padding: 30px;
 }

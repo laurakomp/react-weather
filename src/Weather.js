@@ -18,6 +18,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       coordinates: response.data.coord,
+      feelslike: response.data.main.feels_like,
     });
   }
 
@@ -58,6 +59,24 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
+        <footer>
+          This project was coded by Laura Komp and is{" "}
+          <a
+            href="https://github.com/laurakomp/react-weather"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://brave-murdock-e59f5f.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
+        </footer>
       </div>
     );
   } else {

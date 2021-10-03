@@ -19,10 +19,9 @@ export default function FormattedDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let years = props.date.getYear() + 1900;
   return (
     <div>
-      {day} {hours}:{minutes}, {years}
+      {day} {hours}:{minutes}
     </div>
   );
 }

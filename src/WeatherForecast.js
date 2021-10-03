@@ -16,31 +16,34 @@ export default function WeatherForecast(props) {
     setLoaded(true);
   }
 
-  if (loaded) {
-    console.log(forecast);
-    return (
-      <div className="WeatherForecast">
-        <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 5) {
-              return (
-                <div className="col-2" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
-        </div>
-      </div>
-    );
-  } else {
+  function load() {
     let apiKey = "ebde765ff48c731ae66ed15747f18ce4";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (loaded) {
+    console.log(forecast);
+    return (
+      <div className="WeatherForecast row">
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 5) {
+            return (
+              <div className="col" key={index}>
+                <WeatherForecastDay data={dailyForecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  } else {
+    load();
+
     return null;
   }
 }
