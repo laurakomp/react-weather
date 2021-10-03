@@ -12,9 +12,17 @@ export default function App() {
           <a
             href="https://github.com/laurakomp/react-weather"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             open-sourced
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://brave-murdock-e59f5f.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
           </a>
         </footer>
       </div>
